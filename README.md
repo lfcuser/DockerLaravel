@@ -1,20 +1,7 @@
 # DockerLaravel
-Репозиторий с настроенным для запуска в докере проектом
+A repository containing a Docker-ready project
 
-# Версии
-
-<table>
-    <tr>
-        <td>Версия</td>
-        <td>Ветка</td>
-    </tr>
-    <tr>
-        <td>Laravel 11, php 8.4.1, rabbit</td>
-        <td>laravel-11-php8.4 (current)</td>
-    </tr>
-</table>
-
-# Настроены
+# Contains
 1. nginx
 2. pgsql
 3. php + laravel 11
@@ -22,27 +9,23 @@
 5. redis
 6. cron
 
-# Предустановлены:
-1. Пакет для jwt авторизации tymon/jwt-auth (все настроено)
-2. Пакет для свагер аннотаций zircote/swagger-php
-3. Пакет vladimir-yuldashev/laravel-queue-rabbitmq
-4. Пакет predis/predis
+# Pre-installed:
+1. tymon/jwt-auth
+2. zircote/swagger-php
+3. vladimir-yuldashev/laravel-queue-rabbitmq
+4. predis/predis
 
-# Для запуска бэка:
+# Run:
 1. cd backend
 2. make get-env
 3. sudo make up
 4. sudo make first-run
 
-# Для запуска тестов
+# Tests
 1. sudo make test
 
-# Для действий в php контейнере
+# Inside php container
 1. sudo docker exec -ti backend-service-php-1 /bin/bash
 
 # Swagger
-    Для генерации Swagger по аннотациям используются библиотеки:
-        - zircote/swagger-php
-        - doctrine/annotations
-    Для запуска генерации выполнить команду:
-        - ./vendor/bin/openapi app -o openapi.yaml
+    ./vendor/bin/openapi app -o openapi.yaml

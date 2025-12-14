@@ -6,7 +6,7 @@ namespace App\Http\Controllers\Swagger\Schemas;
 
  * @OA\Tag(
  *   name="Auth",
- *   description="Авторизация"
+ *   description="Auth"
  * )
  */
 class Tags
